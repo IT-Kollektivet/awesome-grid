@@ -4,3 +4,6 @@
 [submodule "white-space"]
 	path = white-space
 	url = git@github.com:dotnetCarpenter/white-space.git
+[submodule "awesome-grid-builder"]
+	path = awesome-grid-builder
+	url = git@github.com:IT-Kollektivet/awesome-grid-builder.git
