@@ -3,11 +3,70 @@
 <head>
   <meta charset="utf-8">
   <title>awsome-grid example</title>
-  <link rel="text/stylesheet" href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-  <div class="grid">
-    <div class="grid_item"></div>
-  </div>
+  <form>
+    <div class="grid grid--center">
+      <div class="grid__item">
+        <h1 class="logo">SEAS-NVE</h1>
+      </div>
+
+      <div class="grid__item palm--none one-third">
+        <h2>1. Indtast personlig kode</h2>
+      </div>
+      <div class="grid__item palm--none one-third">
+        <h2>2. Indtast kontaktdata</h2>
+      </div>
+      <div class="grid__item palm--none one-third">
+        <h2>3. Lynskrab</h2>
+      </div>
+
+      <div class="grid__item">
+        <p><span>Lynskrab</span> og se om du har vundet!</p>
+      </div>
+
+      <div class="grid__item">
+
+        <div class="grid">
+          <div class="grid__item two-thirds lap--three-fifths palm--none">
+            <img src="http://www.w3schools.com/images/w3css.gif"/>
+          </div>
+          <div class="grid__item one-third lap--two-fifths palm--one-whole">
+            <div class="grid">
+              <div class="grid__item center">
+                <div>LIR</div>
+                <input type="text" placeholder="Indtast din kode her"/>
+                <div>LIR</div>
+              </div>
+              <div class="grid__item">
+                <input type="submit" value="Start"/>
+              </div>
+              <div class="grid__item">
+                <p><a href="#">Hvor finder jeg min kode?</a></p>
+                <p><a href="#">Om lynskrab</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="grid__item two-thirds lap--three-fifths palm--none">
+            <dl>
+              <dt>iPhone 5S</dt><dd>Værdi 5.700 kr.</dd>
+              <dt>Garmin GPS</dt><dd>Værdi 1.222 kr.</dd>            
+              <dt>iPhone 5S</dt><dd>Værdi 5.700 kr.</dd>
+              <dt>Garmin GPS</dt><dd>Værdi 1.222 kr.</dd>
+              <dt>iPhone 5S</dt><dd>Værdi 5.700 kr.</dd>
+              <dt>Garmin GPS</dt><dd>Værdi 1.222 kr.</dd>
+              <dt>iPhone 5S</dt><dd>Værdi 5.700 kr.</dd>
+              <dt>Garmin GPS</dt><dd>Værdi 1.222 kr.</dd>
+              <dt>iPhone 5S</dt><dd>Værdi 5.700 kr.</dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+  <script src="../white-space/white-space-fast.min.js"></script>
 </body>
 </html>

@@ -881,8 +881,42 @@
 /**
  * Pull classes, to move grid items back to the left by certain amounts.
  */
+/* grid configuration */
+/* demo colors */
+/* demo stuff - TODO: should be relocated */
+.grid__item {
+  white-space: none;
+  background-color: #a7cb11;
+}
+
+.grid__item > * {
+  border: #fff solid 2px;
+  color: white;
+}
+
+.logo {
+  text-align: right;
+}
+
+.center {
+  text-align: center !important;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  color: #50534d;
+  border: none;
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2rem;
+}
+
+dl {
+  display: inline-block;
+}
+
 /**
- * Add "--not" after a device name to hide it.
+ * Add "--none" after a device name to hide it.
  * Use [device name]--center to center an element.
  * Use [device name]--only to only show it in that device width
  */
@@ -901,10 +935,6 @@
   }
 
   .lap--only {
-    display: none;
-  }
-
-  .portable--only {
     display: none;
   }
 
@@ -927,36 +957,6 @@
   }
 
   .palm--only {
-    display: none;
-  }
-
-  .portable--only {
-    display: none;
-  }
-
-  .desk--only {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .portable--only {
-    display: inline-block;
-  }
-
-  .portable--none {
-    display: none;
-  }
-
-  .portable--center {
-    display: block;
-    margin: auto;
-  }
-
-  .palm--only {
-    display: none;
-  }
-
-  .lap--only {
     display: none;
   }
 
@@ -983,10 +983,6 @@
   }
 
   .lap--only {
-    display: none;
-  }
-
-  .portable--only {
     display: none;
   }
 }

@@ -1,6 +1,64 @@
 
 @import "csswizardry-grids/csswizardry-grids";
 
+/* grid configuration */
+$use-markup-fix: false;
+//$gutter: 1.5%;
+
+/* demo colors */
+$base-color: #a7cb11;
+$base-text-color: #fff;
+$text-color-dark: #50534d;
+
+// demo breakpoints
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 1023px)',
+    'desk' '(min-width: 1024px)'
+);
+
+// demo util
+@mixin prefixer ($property, $value,
+                 $moz:    true,
+                 $webkit: true,
+                 $o:      false,
+                 $ms:     false,
+                 $spec:   true) {
+  @if $moz    {    -moz-#{$property}: $value; }
+  @if $webkit { -webkit-#{$property}: $value; }
+  @if $o      {      -o-#{$property}: $value; }
+  @if $ms     {     -ms-#{$property}: $value; }
+  @if $spec   {         #{$property}: $value; }
+}
+
+/* demo stuff - TODO: should be relocated */
+.grid__item {
+  white-space: none;  
+  background-color: $base-color;
+}
+.grid__item > * {
+  border: #fff solid 2px;
+  color: $base-text-color;
+}
+.logo {
+  text-align: right;
+}
+.center {
+  text-align:center!important;
+}
+input[type="submit"] {
+  background-color: #fff;
+  color: $text-color-dark;
+  border: none;
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2rem;
+}
+dl {
+  display: inline-block;
+}
+
+
 @mixin only-in($names){
   @each $name in $names{
     .#{$name}--only { display:none; }
@@ -17,7 +75,7 @@
   @return $return;
 }
 /**
- * Add "--not" after a device name to hide it.
+ * Add "--none" after a device name to hide it.
  * Use [device name]--center to center an element.
  * Use [device name]--only to only show it in that device width
  */
