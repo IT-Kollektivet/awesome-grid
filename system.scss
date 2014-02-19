@@ -1,0 +1,35 @@
+
+@import "csswizardry-grids/csswizardry-grids";
+
+@mixin only-in($names){
+  @each $name in $names{
+    .#{$name}--only { display:none; }
+  }
+}
+@function filter($filter, $list, $position:1){
+  $return: ();
+  @each $item in $list{
+    $value: nth($item, $position);
+    @if( not compare($value,$filter) ) {
+      $return: append($return, $value)
+    }
+  }
+  @return $return;
+}
+/**
+ * Add "--not" after a device name to hide it.
+ * Use [device name]--center to center an element.
+ * Use [device name]--only to only show it in that device width
+ */
+@each $breakpoint in $breakpoints{
+  $name: nth($breakpoint, 1);
+  @include grid-media-query( $name ) {
+    .#{$name}--only { display:inline-block;}
+    .#{$name}--none { display:none; }
+    .#{$name}--center {
+      display: block;
+      margin: auto;
+    }
+    @include only-in( filter($name, $breakpoints) );
+  }
+}

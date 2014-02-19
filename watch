@@ -1,0 +1,38 @@
+#!/bin/sh
+
+where=$1
+name=$2
+
+if [ -z $where ]
+then
+  where="${PWD}/examples/"
+fi
+if [ -z $name ]
+then
+  name="style.css"
+fi
+
+echo "$name will be saved in $where"
+
+
+# Change `style.css` or `style.min.css` to whatever you would like your compiled
+# stylesheet to be called. Do not rename `system.scss` or alter references to it.
+
+#:nested
+#sass --watch system.scss:style.css --style nested
+
+# No minification
+#sass --watch system.scss:style.css --style expanded
+
+#:compact
+#sass --watch system.scss:style.css --style compact
+
+# Minification
+#sass --watch system.scss:style.css --style compressed
+
+sass --watch system.scss:$where$name --style expanded -r sass_extensions/string.rb
+
+
+
+
+exit 0
