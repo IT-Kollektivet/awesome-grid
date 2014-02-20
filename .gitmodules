@@ -1,9 +1,9 @@
 [submodule "csswizardry-grids"]
 	path = csswizardry-grids
-	url = git@github.com:csswizardry/csswizardry-grids.git
+	url = https://github.com:csswizardry/csswizardry-grids.git
 [submodule "white-space"]
 	path = white-space
-	url = git@github.com:dotnetCarpenter/white-space.git
+	url = https://github.com:dotnetCarpenter/white-space.git
 [submodule "awesome-grid-builder"]
 	path = awesome-grid-builder
-	url = git@github.com:IT-Kollektivet/awesome-grid-builder.git
+	url = https://github.com:IT-Kollektivet/awesome-grid-builder.git
