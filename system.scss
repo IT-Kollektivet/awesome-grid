@@ -14,7 +14,7 @@ $use-markup-fix: false;
   $return: ();
   @each $item in $list{
     $value: nth($item, $position);
-    @if( not compare($value,$filter) ) {
+    @if( not compare($value,$filter)) {
       $return: append($return, $value)
     }
   }
@@ -26,14 +26,17 @@ $use-markup-fix: false;
  * Use [device name]--only to only show it in that device width
  */
 @each $breakpoint in $breakpoints{
+  $blacklist: "portable";
   $name: nth($breakpoint, 1);
   @include grid-media-query( $name ) {
-    .#{$name}--only { display:inline-block;}
-    .#{$name}--none { display:none; }
-    .#{$name}--center {
-      display: block;
-      margin: auto;
+    @if( not compare($name,$blacklist)){
+      .#{$name}--only { display:inline-block;}
+      .#{$name}--none { display:none; }
+      .#{$name}--center {
+        display: block;
+        margin: auto;
+      }
+      @include only-in( filter($name, $breakpoints) );
     }
-    @include only-in( filter($name, $breakpoints) );
   }
 }
