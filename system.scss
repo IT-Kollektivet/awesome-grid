@@ -40,3 +40,7 @@ $use-markup-fix: false;
     }
   }
 }
+/* fix white space issues with white-space.js */
+.grid__item {
+  white-space: none;
+}
